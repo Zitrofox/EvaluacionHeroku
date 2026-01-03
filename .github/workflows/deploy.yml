@@ -1,0 +1,22 @@
+name: Deploy to Heroku
+
+# Se activa cada vez que haces push a la rama main
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Descarga el código de tu repo en el servidor de GitHub
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Despliega en Heroku usando la API KEY de tus Secrets
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.14
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: "evaluacionheroku" # SUSTITUYE POR EL TUYO
+          heroku_email: "gerencia.spulboy@gmail.com"         # SUSTITUYE POR EL TUYO
