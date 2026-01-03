@@ -3,7 +3,7 @@ name: Deploy to Heroku
 # Se activa cada vez que haces push a la rama main
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-deploy:
