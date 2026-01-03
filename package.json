@@ -1,5 +1,5 @@
 {
-  "name": "evaluacion",
+  "name": "evaluacionheroku",
   "version": "1.0.0",
   "description": "Proyecto NodeJS con Express y Heroku",
   "main": "app.js",
